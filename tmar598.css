@@ -1,0 +1,238 @@
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#user {
+	display:inline-block;
+	float:left;
+	font-size:12px;
+	margin-left:50px;
+	color: white;
+}
+
+
+
+#bodySite  {
+border: 2px;
+ border-radius:10px;
+ background-color:white;
+ margin-left:5%; margin-right:5%; margin-top:2%;
+ padding:20px;
+ box-shadow: 0px 0px 10px #888888;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+	float:right;
+	margin:0 auto;
+
+}
+
+.dropdownMenu {
+    border: none;
+    cursor: pointer;
+    background-color: #5AA8F3;
+    color: white;
+	margin-top:25px;
+	margin-right:10px;
+    padding: 16px;
+	font-family: Garamond; 
+    font-size: 18px;
+
+
+}
+
+
+.dropdownOptions {
+    display: none;
+    position: absolute;
+    right: 0;
+	margin-right:10px;
+    width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 5;
+}
+
+.dropdownItem {
+    color: black;
+    background-color: #ccf2ff;
+    border: none;
+    cursor: pointer;
+    width: 160px;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+	font-family: Garamond; 
+    font-size: 16px;
+}
+
+.dropdownItem:hover {
+	background-color: #83d6fc;
+	font-family: Garamond; 
+    font-size: 16px;
+}
+
+.dropdown:hover .dropdownOptions {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+#menu {
+	margin:0 auto;
+	height:100px;
+
+	position:relative;
+    background: white;
+	padding: 5px 50px;
+
+}
+
+#space {
+	height:30px;
+	background-color: #5AA8F3;
+	line-height:10px;
+
+}
+
+#content {
+	margin-top:20px;
+	margin-left:10px;
+	margin-right:10px;
+}
+
+
+
+#myInput {
+    background-position: 10px 12px;
+    width: 85%;
+	height:25px;
+    font-size: 14px;
+	align:center;
+    padding: 12px 20px 12px 20px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+	font-family: Garamond;
+
+}
+
+#myInput2 {
+    background-position: 10px 12px;
+    width: 85%;
+	height:25px;
+    font-size: 14px;
+    padding: 12px 20px 12px 20px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+	font-family: Garamond;
+
+}
+
+#comments {
+    background-position: 10px 12px;
+    width: 75%;
+	height:100px;
+	display:block;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+#buttonFormat{
+	text-align:center;
+	line-height:50px;
+	display:block;
+	background:orange;
+	width:100px;
+	height:50px;
+	text-decoration:none;
+	color:black;
+	border-radius:4px;
+}
+
+#buttonFormat2{
+	margin-top:25px;
+	text-align:center;
+	background:orange;
+	width:200px;
+	height:30px;
+	text-decoration:none;
+	color:black;
+	border-radius:4px;
+	font-family: Garamond;
+
+}
+
+#homePage {
+	text-align:center;
+	display:block;
+	margin-top:25px;
+}
+
+#image {
+
+}
+
+
+.orderEven {
+   background-color: #D8D8D8;
+
+
+}
+
+.orderOdd {
+   background-color: #F2F2F2;
+
+}
+
+.orderTitle {
+	color: white;
+	color: white;
+}
+
+
+
+#showTab {
+   width: 90%;
+   box-shadow: 0px 0px 20px #888888;
+   background-color:#5AA8F3;
+   border-radius:10px;
+   
+}
+
+tr td {
+   padding: 10px;
+
+}
+
+textarea.a {
+	width: 80%;
+	height: 75px;
+    padding: 10px 10px 10px 10px;
+	font-size: 14px;
+	font-family: Garamond;
+	resize: none;
+}
+
+
+textarea.b {
+	width: 295px;
+	height: 75px;
+    padding: 10px 10px 10px 10px;
+	font-size: 14px;
+	font-family: Garamond;
+	resize: none;
+}
+
+body {
+    background-color: #d6f8ff;
+	font-family: Garamond;
+}
+
+

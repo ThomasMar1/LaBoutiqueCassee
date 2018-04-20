@@ -1,0 +1,130 @@
+<!--Website by Thomas Mar-->
+<!DOCTYPE html> <html>
+<head>
+	<title>La Boutique Cass&eacute;e</title>
+	<link rel="stylesheet" type="text/css" href="tmar598.css" />
+	<script src="tmar598.js"></script>
+	<script>
+		window.onload = function() {
+			getHome();
+		}
+	</script>
+	</head>
+
+	<body>
+
+		<div id="menu">
+
+			<img src="http://redsox.uoa.auckland.ac.nz/BC/Open/Service.svc/Logo" alt="logo" width="65" align="center" onclick="getHome()" style="cursor: pointer;">
+			<div class="dropdown">
+				<button class="dropdownMenu"> &#9776;  Menu</button>
+				<div class="dropdownOptions">
+					<button onclick="getHome()" class="dropdownItem">Home</button>
+					<button onclick="getBooks()" class="dropdownItem">Books Shop</button>
+					<button onclick="getBluRay()" class="dropdownItem">Blu-Ray Shop</button>
+					<button onclick="getComments()" class="dropdownItem">Guest Book</button>
+					<button onclick="getLogin()" class="dropdownItem">Login</button>
+					<button onclick="getRegister()" class="dropdownItem">Register</button>
+				</div>
+			</div>
+		</div>
+		<div id="space">
+			<!--<p id="myUN" align="right" style="margin-right:5%; padding:10px; cursor:pointer" onclick=getLoginStatus()></p>-->
+			<p align="right" style="margin-right:5%; padding:10px;"> 
+			<span id="welcomeMessage" style="color:white"></span>
+			<span id="myUN" style="color:white; margin-right:20px;"></span>
+			<span id="log" style="cursor:pointer; color:#5AA8F3; background-color:white; padding:2px;padding-left:15px; padding-right:15px; border-radius:5px;" onclick=getLoginStatus()></span>
+			</p>
+		</div>
+		
+		<div id=loginuser>
+
+		</div>
+
+<div id="bodySite"">
+		<div id="content" align="center">
+
+			<p style="font-size:24px; font-weight:Bold; text-align:center"id="p1"></p>
+			<br>
+
+			<p style="font-size:18px; text-align:center" id="show_result"></p> <br>
+
+			<div id=homePage>
+				<p style="font-size:18px; text-align:center margin-top:75px; margin-bottom:75px;">La Boutique Cass&eacute;e sells books of various genres and types for the keen readers as well as the casual readers!</p>
+				<img src="http://redsox.uoa.auckland.ac.nz/BC/Open/Service.svc/bookimg?id=cd004"  width="200" height="275px" id="image">
+				<img src="http://redsox.uoa.auckland.ac.nz/BC/Open/Service.svc/bookimg?id=jau001"  width="200" height="275px" id="image">
+				<img src="http://redsox.uoa.auckland.ac.nz/BC/Open/Service.svc/bookimg?id=pho001"  width="200" height="275px" id="image">
+				<br><button id="buttonFormat2" onclick="getBooks()">Browse all books</button>
+
+				<p style="font-size:18px; text-align:center; margin-top:75px; margin-bottom:75px;" >La Boutique Cass&eacute;e  also sell Blu-ray movies of various genres for different audiences. Perfect for the family movie night!</p>
+				<img src="http://redsox.uoa.auckland.ac.nz/BC/Open/Service.svc/brimg?id=JohnnyEnglish"  width="200" height="260px" id="image">
+				<img src="http://redsox.uoa.auckland.ac.nz/BC/Open/Service.svc/brimg?id=TheTerminator"  width="200" height="260px" id="image">
+				<img src="http://redsox.uoa.auckland.ac.nz/BC/Open/Service.svc/brimg?id=Titanic"  width="200" height="260px" id="image">
+				<br><button id="buttonFormat2" onclick="getBluRay()">Browse all Blu-ray movies</button>
+			</div>
+
+
+
+
+			<div id="form" style="display:none;">
+				<form id="userform">
+					<textarea class="a"  id="userComment" form="userform" placeholder="Add Comment"></textarea><br><br>
+					<input style="width:80%; height:20px; font-size:14px; padding: 10px 10px 10px 10px; font-family: Garamond; " autocomplete="off" id="username" placeholder="Name"><br><br>
+
+					<input type="button" id="submitButton" value="Submit Comment" onclick="postComment()" style="width: 150px; height:20px; border-radius:4px;";>
+				</form>
+			</div>
+
+			<div id="sbook">
+				<input id="myInput" onkeyup="searchBooks()" placeholder="&#128269; Search for book">
+			</div>
+
+			<div id="sbr">
+				<input id="myInput2" onkeyup="searchBluRay()" placeholder="&#128269; Search for Blu-ray movies">
+			</div>
+
+			<div id="sc" style="display:none">
+				<br>
+				<br>
+				<p style="font-size:20px; font-weight:Bold;"id="p2">Most recent comments</p><br>
+				<p style="font-size:18px;" id="showComments"></p>
+				<iframe style="width:80%; height:600px; background: #FFFFFF; font-family: Arial; "id="iframe" src="http://redsox.uoa.auckland.ac.nz/BC/Open/Service.svc/htmlcomments"></iframe>
+			</div>
+
+
+			<table align="center" id="showTab" border="0" ></table>
+
+		</div>
+
+		<div id="login" style="display:none; text-align:center;">
+			Please sign in to continue.<br><br>
+
+			<form id="signin">
+				<input style="width:300px; height:25px; font-size:14px; padding-left:10px; font-family: Garamond; " id="myUsername" placeholder="Username"><br><br>
+
+				<input type="password" style="width:300px; height:25px; font-size:14px; padding-left:10px; font-family: Garamond; " id="myPassword" placeholder="Password">
+				<br><br>
+				<button type="button" style="margin-top:20px; padding-left:10px; padding-right:10px;" id="LoginButton" onclick="signIn()";>Sign In</button>
+			</form>
+			<br><br><br>
+			Don't have an account?<br><br>
+			<input type="button" style="margin-top:20px; padding-left:10px; padding-right:10px;" id="RegisterButton" value="Register Now" onclick="getRegister()">
+		</div>
+
+		<div id="register" style="display:none; text-align:center">
+			Please register your details to buy books and Blu-ray movies.<br><br>
+			<form id="registerform">
+				<input type="text"     style="width:300px; height:25px; font-size:14px; font-family: Garamond; padding-left:10px; margin-top:10px; margin-bottom:10px" id="registerUserName" placeholder="Username"><br>
+				<input type="password" style="width:300px; height:25px; font-size:14px; font-family: Garamond; padding-left:10px; margin-top:10px; margin-bottom:10px" id="registerPassword" placeholder="Password"><br>
+				<input type="text"     style="width:300px; height:25px; font-size:14px; font-family: Garamond; padding-left:10px; margin-top:10px; margin-bottom:10px" id="regAddress" placeholder="Address"><br>
+				<input type="button" style="margin-top:20px; padding-left:10px; padding-right:10px;" id="RegisterButton" value="Register Now" onclick="register()">
+				<br>
+				<!--<input type="button" id="LoginButton" value="Back" onclick="getLogin()";> -->
+			</form>
+
+		</div>
+		<br><br>
+	</div><br><br>
+		<p style="text-align:center;"> &copy; Thomas Mar 2017. University of Auckland All rights reserved.<p><br>
+	</body>
+</html>
